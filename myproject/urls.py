@@ -5,5 +5,5 @@ from django.urls import include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/v1/images/', include('decolorizer.urls')),
+    path('api/v1/decolorizer/', include('decolorizer.urls')),
 ]

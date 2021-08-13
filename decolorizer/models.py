@@ -6,7 +6,7 @@ from PIL import Image as PillowImage
 class Image(models.Model):
     upload = models.ImageField(upload_to='images')
 
-    # remove color
+    # edit colors and save
     def save(self, *args, **kwargs):
         super().save(*args, **kwargs)
         image = PillowImage.open(self.upload.path)
